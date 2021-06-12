@@ -1,0 +1,60 @@
+module.exports = {
+  env: {
+    es6: true,
+    jest: true,
+    browser: true,
+  },
+  extends: ["airbnb", "prettier", "prettier/react"],
+  globals: {
+    Atomics: "readonly",
+    SharedArrayBuffer: "readonly",
+    __DEV__: true,
+  },
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 2018,
+    sourceType: "module",
+  },
+  plugins: ["react", "jsx-a11y", "import", "react-hooks", "prettier"],
+  rules: {
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "array-callback-return": "off",
+    "block-scoped-var": "off",
+    "import/no-duplicates": "off",
+    "import/prefer-default-export": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        js: "never",
+        jsx: "never",
+        ts: "never",
+        tsx: "never",
+      },
+    ],
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/interactive-supports-focus": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "no-fallthrough": "off",
+    "no-underscore-dangle": "off",
+    "no-use-before-define": "off",
+    "no-var": "off",
+    "prettier/prettier": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-wrap-multilines": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-curly-newline": ["off"],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        extensions: [".tsx"],
+      },
+    ],
+    "react/require-default-props": "off",
+    "vars-on-top": "off",
+  },
+}
